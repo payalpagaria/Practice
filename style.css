@@ -113,4 +113,9 @@ body {
   button.delete:hover, button.update:hover {
     background-color: #9b0000;
   }
-  
+  .taskDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }

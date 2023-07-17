@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do app</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
+    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-    <div>
+    <div class="box" >
         <label>Task</label><br>
-        <input type="text" placeholder="Enter some text" id="taskInput"> <br>
-        <button type="submit" id="btn">Submit</button>
+        <input class="input" type="text" placeholder="Enter some title" id="titleInput"> <br>
+        <input class="input" type="text" placeholder="Enter some text" id="taskInput"> <br>
+        <button class="button is-info" type="submit" id="btn" onclick="onSubmit()">Submit</button>
         <ul id="list"></ul>
+        <a href="todo.html">Show to-do</a>
+        <a href="search.html">Search for a task</a>
     </div>
-    <script src="index.js"></script>
+ 
 </body>
 </html>

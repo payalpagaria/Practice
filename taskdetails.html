@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Task Details</h1>
+    <div id="taskDetails">
+        <!-- Task details will be dynamically added here -->
+    </div>
+    <a href="index.html">Go to home</a>
+    <script>
+        // Retrieve the selected task from LocalStorage
+        const storedSelectedTask = localStorage.getItem('selectedTask');
+        if (storedSelectedTask) {
+            const selectedTask = JSON.parse(storedSelectedTask);
+            console.log(selectedTask);
+            displayTaskDetails(selectedTask);
+        }
+
+        function displayTaskDetails(task) {
+            // Create elements to display task details
+            const taskDetailsDiv = document.getElementById('taskDetails');
+            const taskHeading = document.createElement('h2');
+            const taskDescription = document.createElement('p');
+
+            // Set the task details
+           taskHeading.textContent = `${task.taskTitleInput}`;
+            taskDescription.textContent = `${task.taskInput}`; // Replace this with the actual task description
+
+            // Append the elements to the taskDetailsDiv
+            taskDetailsDiv.appendChild(taskHeading);
+            taskDetailsDiv.appendChild(taskDescription);
+        }
+    </script>
+</body>
+</html>
