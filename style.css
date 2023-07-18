@@ -119,3 +119,20 @@ body {
     align-items: center;
     height: 100vh;
   }
+  .arr {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0;
+    margin-left: 15px; /* Adjust the margin as needed */
+}
+.head{
+  color: #007BFF;
+  font-size: 25px;
+
+  
+}
+.taskdics{
+  margin-bottom: 10px;
+}

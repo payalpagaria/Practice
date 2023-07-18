@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Details</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
 
 </head>
 <body>
     <h1>Task Details</h1>
-    <div id="taskDetails">
+    <div id="taskDetails" class="box">
         <!-- Task details will be dynamically added here -->
     </div>
-    <a href="index.html">Go to home</a>
+    <a href="index.html" class="button is-info">Go to home</a>
+
     <script>
         // Retrieve the selected task from LocalStorage
         const storedSelectedTask = localStorage.getItem('selectedTask');
@@ -30,8 +33,8 @@
             const taskDescription = document.createElement('p');
 
             // Set the task details
-           taskHeading.textContent = `${task.taskTitleInput}`;
-            taskDescription.textContent = `${task.taskInput}`; // Replace this with the actual task description
+           taskHeading.textContent = `Task Title : ${task.taskTitleInput}`;
+            taskDescription.textContent = `Task Discription : ${task.taskInput}`; // Replace this with the actual task description
 
             // Append the elements to the taskDetailsDiv
             taskDetailsDiv.appendChild(taskHeading);

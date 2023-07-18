@@ -108,16 +108,22 @@ function showList() {
 
     for (let i = 0; i < taskInputList.length; i++) {
         const newLi = document.createElement('li');
-        const heading=document.createElement('h3');
+        const heading=document.createElement('span');
         const Taskdiscription=document.createElement('p');
         const newdel=document.createElement('button');
-        const newupdate=document.createElement('button')
-        newdel.textContent="Delete";
+        const newupdate=document.createElement('button');
+        const arrow=document.createElement('span')
+         newdel.textContent="Delete";
         newupdate.textContent="Update";
+        arrow.textContent=">"
+        arrow.classList.add('arr');
+        heading.classList.add("head");
+        Taskdiscription.classList.add('taskdics');
         heading.textContent=`${taskInputList[i].taskTitleInput}`;
         Taskdiscription.textContent=truncateText(taskInputList[i].taskInput, maxCharsPerLine * maxLines)
         ulList.appendChild(newLi);
         newLi.appendChild(heading);
+        newLi.appendChild(arrow);
         newLi.appendChild(Taskdiscription);
         newLi.appendChild(newdel);
         newLi.appendChild(newupdate);
@@ -132,6 +138,8 @@ function showList() {
         })
         handleSwipeLeft(newLi, i);
         handleSwipeRight(newLi,i);
-
+        arrow.addEventListener('click', function() {
+            showTaskDetails(i);
+        });
     }
 }

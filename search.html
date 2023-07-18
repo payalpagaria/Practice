@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
 </head>
 <body>
-    <label>Search for a Task</label>
-    <input type="text" placeholder="Please enter the task" id="searchInput"><br>
-    <button type="submit" id="searchBtn">Search</button><br>
+
+<label>Search for a Task</label>
+<div class="panel-block">
+  <p class="control has-icons-left">
+    <input class="input" type="text" placeholder="Search" id="searchInput">
+    <span class="icon is-left">
+      <i class="fas fa-search" aria-hidden="true"></i>
+
+    </span>
+    <button type="submit" id="searchBtn">Search</button><br><br>
+    <a href="index.html" class="button is-info">Go to home</a>
+  </p>
+    
+    
+   
     <div id="search">
 
     </div>
+    
+
     <script src="todo.js">
           
     </script>
